@@ -1,5 +1,5 @@
 # Kevin Hsu
-# Project Euler Solutinons in Python
+# Project Euler Solutions in Python
 
 # Problem1 Multiples of 3 and 5
 def multiples_3and5(maxNumber):
