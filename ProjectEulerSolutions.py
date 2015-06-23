@@ -49,18 +49,61 @@ def largestPrimeFactor(number):
 # Problem4 Largest Palindrome Product
 def largestPalindromeProduct(digits):
 	num1 = num2 = 10 ** digits -1
-
-	print(reversed("NERD"))
-	while(True):
+	palindromeArray = []
+	while(num1>0):
 		# print(num1,num2,num1*num2)
 		check = str(num1*num2)
-		if(check == reversed(check)):
-			print(num1*num2)
+		reverse = check[::-1]
+		if(check == reverse):
+			palindromeArray.append(num1*num2)
+			# print(num1*num2)
+		if(num1 < num2):
+			num2 = num2 -1
+		else:
+			num1 = num1 -1
+			num2 = 10 **digits -1
+	print(max(palindromeArray))
+# largestPalindromeProduct(3)
+
+
+
+# Problem5 Smallest Multiple
+def smallestMultiple(largestDivisor):
+	number = 1
+	while(True):
+		divisor = largestDivisor
+		isDivisible = True
+		while(divisor > 0):
+			if((number % divisor) == 0):
+				divisor = divisor -1
+			else:
+				isDivisible = False
+				break
+		if(isDivisible):
+			print(number)
 			break
 		else:
-			if(num1 < num2):
-				num2 = num2 -1
-			else:
-				num1 = num1 -1
-				num2 = 10 **digits -1
-largestPalindromeProduct(3)
+			number = number + 1
+# smallestMultiple(20)
+
+
+
+# Problem6 Sum Square Difference
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
