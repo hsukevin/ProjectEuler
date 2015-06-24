@@ -1,2 +1,3 @@
 # ProjectEuler
-My solutions to project euler brain teasers.
+
+My solutions to ProejctEuler.net math brain teasers.
