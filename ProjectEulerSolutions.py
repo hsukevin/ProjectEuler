@@ -241,9 +241,24 @@ def largestGridProduct(adjacent,size,grid):
 
 
 
-
-
-
+# Problem12 Highly Divisible Triangular Number
+def triangleNumber(divisors):
+	naturalNumber = 0
+	triangleNumber = 0
+	divisorCount = 0
+	lastBiggestDivisor = 0
+	while(divisorCount<divisors + 1):
+		naturalNumber = naturalNumber + 1
+		triangleNumber = naturalNumber + triangleNumber
+		divisorCount = 0
+		for factor in range(triangleNumber):
+			if((triangleNumber%(factor+1)) == 0):
+				divisorCount = divisorCount + 1
+		if (divisorCount > lastBiggestDivisor):
+			lastBiggestDivisor = divisorCount
+			print("Triangle: "+str(triangleNumber)+"   natural: "+str(naturalNumber)+"   factors:"+str(divisorCount))
+	print("Answer: " + str(triangleNumber))
+triangleNumber(500)
 
 
 
