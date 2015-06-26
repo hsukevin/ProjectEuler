@@ -251,21 +251,9 @@ def triangleNumber(divisors):
 		naturalNumber = naturalNumber + 1
 		triangleNumber = naturalNumber + triangleNumber
 		divisorCount = 0
-		for factor in range(triangleNumber):
+		for factor in range(int(triangleNumber**0.5)+1):
 			if((triangleNumber%(factor+1)) == 0):
 				divisorCount = divisorCount + 1
-		if (divisorCount > lastBiggestDivisor):
-			lastBiggestDivisor = divisorCount
-			print("Triangle: "+str(triangleNumber)+"   natural: "+str(naturalNumber)+"   factors:"+str(divisorCount))
-	print("Answer: " + str(triangleNumber))
+		divisorCount *= 2
+	print(triangleNumber)
 triangleNumber(500)
-
-
-
-
-
-
-
-
-
-
